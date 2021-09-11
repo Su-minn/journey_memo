@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
                 child: Text(
               'Journey Memo',
               style: TextStyle(
-                color: Colors.red,
+                color: Colors.blue,
                 fontWeight: FontWeight.bold
               ),
             )),
