@@ -12,7 +12,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-            child: Container(child: Center(child: Text('Journey Memo')))),
+          child: Container(
+            child: Center(
+                child: Text(
+              'Journey Memo',
+              style: TextStyle(
+                color: Colors.red,
+                fontWeight: FontWeight.bold
+              ),
+            )),
+          ),
+        ),
       ),
     );
   }
