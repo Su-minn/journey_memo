@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:journey_memo_jussuit/home_page.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -10,20 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: SafeArea(
-          child: Container(
-            child: Center(
-                child: Text(
-              'Journey Memo',
-              style: TextStyle(
-                color: Colors.blue,
-                fontWeight: FontWeight.bold
-              ),
-            )),
-          ),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
+
