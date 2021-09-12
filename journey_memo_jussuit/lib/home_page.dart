@@ -11,6 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  int _selectedIndex = 0;
   List<BottomNavigationBarItem> btmNavItems = [
     BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ""),
     BottomNavigationBarItem(icon: Icon(Icons.search_outlined), label: ""),
@@ -18,8 +20,13 @@ class _HomePageState extends State<HomePage> {
     BottomNavigationBarItem(icon: Icon(Icons.healing_outlined), label: ""),
     BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: ""),
   ];
-
-  int _selectedIndex = 0;
+  static List<Widget> _screens = [
+    Container(color: Colors.orangeAccent,),
+    Container(color: Colors.amberAccent,),
+    Container(color: Colors.tealAccent,),
+    Container(color: Colors.deepPurpleAccent,),
+    Container(color: Colors.deepOrangeAccent,),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +34,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Journey Memo'),
       ),
-      body: Container(
-        child: Center(
-            child: Text(
-          'Journey Memo',
-          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
-        )),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: btmNavItems,
