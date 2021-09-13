@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:journey_memo_jussuit/feed_screen.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
     BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: ""),
   ];
   static List<Widget> _screens = [
-    Container(color: Colors.orangeAccent,),
+    FeedScreen(),
     Container(color: Colors.amberAccent,),
     Container(color: Colors.tealAccent,),
     Container(color: Colors.deepPurpleAccent,),
@@ -31,9 +32,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Journey Memo'),
-      ),
       body: IndexedStack(
         index: _selectedIndex,
         children: _screens,
