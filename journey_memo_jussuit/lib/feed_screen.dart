@@ -6,7 +6,11 @@ class FeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Journey Memo'),),
+      appBar: AppBar(
+        title: Text(
+          'Journey Memo',
+        ),
+      ),
     );
   }
 }
