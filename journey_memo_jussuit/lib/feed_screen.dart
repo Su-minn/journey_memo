@@ -9,6 +9,7 @@ class FeedScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Journey Memo',
+          style: TextStyle(fontFamily: 'Roblox'),
         ),
       ),
     );
