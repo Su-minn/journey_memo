@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:journey_memo_jussuit/widgets/post.dart';
 
 class FeedScreen extends StatelessWidget {
   const FeedScreen({Key? key}) : super(key: key);
@@ -17,9 +18,7 @@ class FeedScreen extends StatelessWidget {
   }
 
   Widget feedListBuilder(BuildContext context, int index) {
-    return Container(
-      color: Colors.accents[index % Colors.accents.length],
-      height: 200,
-    );
+    return Post(index);
   }
 }
+
